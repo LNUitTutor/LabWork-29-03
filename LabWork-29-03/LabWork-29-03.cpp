@@ -27,6 +27,20 @@ int main()
     if (A.distance(CPoint<int>()) <= eps) std::cout << A << " is special\n";
     if (B.distance(CPoint<int>()) <= eps) std::cout << B << " is special\n";
     if (C.distance(CPoint<int>()) <= eps) std::cout << C << " is special\n";
+
+    // Іменовані точки
+    NamedPoint<double> N('N', -1, -1);
+    NamedPoint<double> O;
+    NamedPoint<double> M('M', 2, 2);
+    std::cout << " N = " << N << "\n M = " << M << '\n';
+
+    /* Прочитайте з текстового файла декілька точок з дійсними координатами.
+     * Виведіть їх на екран. Визначте, скільки точок належить концентричним
+     * кругам з центром в початку системи координат і радіусами 1, 2, 3.
+     * Обчисліть довжину ламаної, послідовними вузлами якої є задані точки.
+     * Збільшіть удвічі координати кожної точки, обчисліть довжину ламаної знову. 
+     */
+
 }
 
 CPoint<int> read_point()
