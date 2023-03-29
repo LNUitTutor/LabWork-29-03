@@ -13,11 +13,19 @@ int main()
     CPoint<int> B = read_point();
     CPoint<int> C = read_point();
     std::cout << " A = " << A << '\n' << " B = " << B << '\n' << " C = " << C << '\n';
-    int a = A.distance(B);
-    int b = B.distance(C);
-    int c = C.distance(A);
-    int P = a + b + c;
+    double a = A.distance(B);
+    double b = B.distance(C);
+    double c = C.distance(A);
+    double P = a + b + c;
     double p = P * 0.5;
     double S = sqrt(p * (p - a) * (p - b) * (p - c));
     std::cout << " P = " << P << "    S = " << S << '\n';
+}
+
+CPoint<int> read_point()
+{
+    std::cout << "Input two integers: ";
+    int x, y;
+    std::cin >> x >> y;
+    return CPoint<int>(x, y);
 }

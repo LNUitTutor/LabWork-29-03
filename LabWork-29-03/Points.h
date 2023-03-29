@@ -14,7 +14,7 @@ public:
 	{
 		os << '(' << x << "; " << y << ')';
 	}
-	TNum distance(const CPoint& p) const;
+	double distance(const CPoint& p) const;
 	CPoint operator+(const CPoint& p) const
 	{
 		return CPoint(this->x + p.x, this->y + p.y);
@@ -26,10 +26,10 @@ public:
 };
 
 template<typename TNum>
-inline TNum CPoint<TNum>::distance(const CPoint& p) const
+inline double CPoint<TNum>::distance(const CPoint& p) const
 {
 	TNum _y = y - p.y;
-	return sqrt(pow(x - p.x, 2) + _y*_y);
+	return sqrt(pow(x - p.x, 2) + (double)_y*_y);
 }
 
 template<typename TNum>
