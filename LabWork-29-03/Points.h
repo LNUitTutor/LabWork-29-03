@@ -40,5 +40,5 @@ std::ostream& operator<<(std::ostream& os, const CPoint<TNum>& A)
 template<typename TNum>
 CPoint<TNum> operator*(const CPoint<TNum>& p, TNum n)
 {
-	return CPoint(p.get_x() * n, p.get_y() * n);
+	return CPoint<TNum>(p.get_x() * n, p.get_y() * n);
 }
