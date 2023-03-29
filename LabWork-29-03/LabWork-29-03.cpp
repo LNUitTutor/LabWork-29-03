@@ -20,6 +20,13 @@ int main()
     double p = P * 0.5;
     double S = sqrt(p * (p - a) * (p - b) * (p - c));
     std::cout << " P = " << P << "    S = " << S << '\n';
+    /* Чи є серед заданих точок «особливі» – такі,
+     * що лежить в ε-околі початку координат? */
+    std::cout << "Input the eps: ";
+    double eps; std::cin >> eps;
+    if (A.distance(CPoint<int>()) <= eps) std::cout << A << " is special\n";
+    if (B.distance(CPoint<int>()) <= eps) std::cout << B << " is special\n";
+    if (C.distance(CPoint<int>()) <= eps) std::cout << C << " is special\n";
 }
 
 CPoint<int> read_point()
